@@ -1,0 +1,9 @@
+ID,Name,Age,Email,Phone,Salary,Joining_Date,Is_Active
+101,john DOE,25,john@example.com,5551234567,50000,2024.03.12,True
+101,john DOE,25,john@example.com,5551234567,50000,2024.03.12,True
+102,  MARY jane  ,,mary.jane@,15557654321,-15000,12/03/2024,False
+103,ALAN smith,32,alan.smith@work.org,,0,03-12-2024,Yes
+103,ALAN smith,32,alan.smith@work.org,,0,03-12-2024,Yes
+104,bob builder,250,bob@builder.com,+1 (555) 765-4321,75000,2024-03-12,not-a-bool
+105,NaN,18,invalid-email,123-456,99999999,invalid_date,1
+106,Charlie Brown,twenty-five,charlie@peanuts.org,0987654321,120000,2024-06-25,No
