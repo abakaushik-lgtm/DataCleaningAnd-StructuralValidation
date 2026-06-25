@@ -51,7 +51,15 @@ st.markdown("""
         font-family: 'Inter', sans-serif;
     }
     
-    h1, h2, h3, h4, h5, h6 {
+    h1 {
+        font-family: 'Outfit', sans-serif;
+        font-weight: 700;
+        color: #1F2937;
+        font-size: 2.2rem !important;
+        line-height: 1.2;
+    }
+    
+    h2, h3, h4, h5, h6 {
         font-family: 'Outfit', sans-serif;
         font-weight: 600;
         color: #1F2937;
@@ -109,6 +117,227 @@ st.markdown("""
     .stDownloadButton {
         display: inline-block;
     }
+    
+    /* Premium Quality Card */
+    .quality-card {
+        background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+        border-radius: 16px;
+        padding: 24px;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+        border: 1px solid #E5E7EB;
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+        margin-top: 10px;
+        margin-bottom: 24px;
+        align-items: center;
+    }
+    
+    .quality-left {
+        flex: 1;
+        text-align: center;
+        border-right: 1px solid #E5E7EB;
+        padding-right: 32px;
+    }
+    
+    .quality-right {
+        flex: 2;
+    }
+    
+    .overall-title {
+        font-size: 0.85rem;
+        color: #6B7280;
+        font-weight: 700;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+    }
+    
+    .overall-score {
+        font-size: 3.5rem;
+        font-weight: 800;
+        line-height: 1;
+        margin-bottom: 8px;
+        font-family: 'Outfit', sans-serif;
+    }
+    
+    .score-out-of {
+        font-size: 1.5rem;
+        color: #9CA3AF;
+        font-weight: 500;
+    }
+    
+    .overall-status {
+        font-size: 1rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+    
+    .status-excellent { color: #10B981; }
+    .status-good { color: #F59E0B; }
+    .status-poor { color: #EF4444; }
+    
+    .breakdown-title {
+        font-size: 0.95rem;
+        font-weight: 700;
+        color: #374151;
+        margin-bottom: 16px;
+        font-family: 'Outfit', sans-serif;
+    }
+    
+    .breakdown-item {
+        margin-bottom: 12px;
+    }
+    
+    .breakdown-label {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: #4B5563;
+        margin-bottom: 4px;
+    }
+    
+    .progress-bar {
+        background-color: #E5E7EB;
+        height: 8px;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+    
+    .progress-fill {
+        height: 100%;
+        border-radius: 4px;
+        transition: width 0.8s ease-in-out;
+    }
+    
+    @media (max-width: 768px) {
+        .quality-card {
+            flex-direction: column;
+            gap: 20px;
+        }
+        .quality-left {
+            border-right: none;
+            padding-right: 0;
+            border-bottom: 1px solid #E5E7EB;
+            padding-bottom: 20px;
+            width: 100%;
+        }
+        .quality-right {
+            width: 100%;
+        }
+    }
+    
+    /* KPI Card styling */
+    .kpi-row {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    
+    .kpi-card {
+        flex: 1;
+        background-color: #ffffff;
+        border-radius: 12px;
+        padding: 20px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+        border: 1px solid #E5E7EB;
+        text-align: center;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .kpi-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.02);
+    }
+    
+    .kpi-title {
+        font-size: 0.8rem;
+        color: #6B7280;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        margin-bottom: 6px;
+    }
+    
+    .kpi-value {
+        font-size: 1.8rem;
+        color: #111827;
+        font-weight: 800;
+        font-family: 'Outfit', sans-serif;
+    }
+    
+    @media (max-width: 768px) {
+        .kpi-row {
+            flex-direction: column;
+            gap: 12px;
+        }
+    }
+    
+    /* Before vs After Table */
+    .comparison-table-container {
+        margin-top: 15px;
+        margin-bottom: 24px;
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid #E5E7EB;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    }
+    
+    .comparison-table {
+        width: 100%;
+        border-collapse: collapse;
+        text-align: left;
+        background-color: #ffffff;
+    }
+    
+    .comparison-table th {
+        background-color: #374151;
+        color: #ffffff;
+        padding: 12px 16px;
+        font-weight: 700;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+    
+    .comparison-table td {
+        padding: 12px 16px;
+        border-bottom: 1px solid #E5E7EB;
+        color: #4B5563;
+        font-size: 0.95rem;
+    }
+    
+    .comparison-table tr:last-child td {
+        border-bottom: none;
+    }
+    
+    .comparison-table tr:hover {
+        background-color: #F9FAFB;
+    }
+    
+    .comparison-metric {
+        font-weight: 600;
+        color: #111827 !important;
+    }
+    
+    .val-before {
+        color: #EF4444 !important;
+        font-weight: 600;
+    }
+    
+    .val-after {
+        color: #10B981 !important;
+        font-weight: 700;
+    }
+    
+    .val-neutral {
+        color: #4B5563 !important;
+    }
 </style>
 """, unsafe_allow_html=True)
 
@@ -151,6 +380,75 @@ def reset_app_state(file_name):
     st.session_state['validation_results'] = None
     st.session_state['validation_ran'] = False
     st.session_state['raw_profile'] = None
+
+def render_comparison_table(df_raw, df_clean, initial_score, current_score, schema_config, custom_rules):
+    """
+    Renders a before vs after comparison table of data quality metrics.
+    """
+    # 1. Missing Values
+    raw_profile = profile_dataframe(df_raw)
+    raw_missing = sum(c['missing_count'] for c in raw_profile['columns_profile'])
+    clean_profile = profile_dataframe(df_clean)
+    clean_missing = sum(c['missing_count'] for c in clean_profile['columns_profile'])
+    
+    # 2. Duplicates
+    raw_dupes = df_raw.duplicated().sum()
+    clean_dupes = df_clean.duplicated().sum()
+    
+    # 3. Invalid Values (Type mismatches + custom rules)
+    raw_val = validate_schema(df_raw, schema_config)
+    raw_invalid = len(raw_val["errors"])
+    if custom_rules:
+        raw_r = evaluate_custom_rules(df_raw, custom_rules)
+        raw_invalid += len(raw_r["failed_rows"])
+        
+    clean_val = validate_schema(df_clean, schema_config)
+    clean_invalid = len(clean_val["errors"])
+    if custom_rules:
+        clean_r = evaluate_custom_rules(df_clean, custom_rules)
+        clean_invalid += len(clean_r["failed_rows"])
+        
+    # Styling classes for text color indicators
+    missing_after_class = "val-after" if clean_missing == 0 else ("val-before" if clean_missing > raw_missing else "val-neutral")
+    dupes_after_class = "val-after" if clean_dupes == 0 else ("val-before" if clean_dupes > raw_dupes else "val-neutral")
+    invalid_after_class = "val-after" if clean_invalid == 0 else ("val-before" if clean_invalid > raw_invalid else "val-neutral")
+    score_after_class = "val-after" if current_score >= initial_score else "val-before"
+    
+    st.markdown(f"""
+    <div class="comparison-table-container">
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Metric</th>
+                    <th>Before Cleaning</th>
+                    <th>After Cleaning</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="comparison-metric">Missing Values</td>
+                    <td class="val-before">{raw_missing:,}</td>
+                    <td class="{missing_after_class}">{clean_missing:,}</td>
+                </tr>
+                <tr>
+                    <td class="comparison-metric">Duplicate Records</td>
+                    <td class="val-before">{raw_dupes:,}</td>
+                    <td class="{dupes_after_class}">{clean_dupes:,}</td>
+                </tr>
+                <tr>
+                    <td class="comparison-metric">Invalid Values</td>
+                    <td class="val-before">{raw_invalid:,}</td>
+                    <td class="{invalid_after_class}">{clean_invalid:,}</td>
+                </tr>
+                <tr>
+                    <td class="comparison-metric">Data Quality Score</td>
+                    <td class="val-before">{initial_score:.1f}%</td>
+                    <td class="{score_after_class}">{current_score:.1f}%</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    """, unsafe_allow_html=True)
 
 # Process File Upload
 if uploaded_file is not None:
@@ -287,13 +585,107 @@ with tab_upload:
         
         # Display file name and details
         file_size_mb = uploaded_file.size / (1024 * 1024)
-        col_m1, col_m2, col_m3, col_m4 = st.columns(4)
-        col_m1.metric("File Name", uploaded_file.name)
-        col_m2.metric("File Size", f"{file_size_mb:.2f} MB")
-        col_m3.metric("Original Rows", f"{raw_rows:,}")
-        col_m4.metric("Original Columns", f"{raw_cols}")
         
-        st.markdown("#### Sample Preview (Top 100 rows)")
+        # Calculate clean profile details for KPI row
+        clean_profile = profile_dataframe(df_clean)
+        clean_dupes = df_clean.duplicated().sum()
+        clean_missing = sum(col_prof["missing_count"] for col_prof in clean_profile["columns_profile"])
+        
+        st.markdown(f"📁 **Uploaded File:** `{uploaded_file.name}` ({file_size_mb:.2f} MB)")
+        
+        st.markdown(f"""
+        <div class="kpi-row">
+            <div class="kpi-card">
+                <div class="kpi-title">Rows</div>
+                <div class="kpi-value">{clean_rows:,}</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-title">Columns</div>
+                <div class="kpi-value">{clean_cols}</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-title">Missing Cells</div>
+                <div class="kpi-value">{clean_missing:,}</div>
+            </div>
+            <div class="kpi-card">
+                <div class="kpi-title">Duplicate Rows</div>
+                <div class="kpi-value">{clean_dupes:,}</div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # Calculate quality score breakdown
+        q_breakdown = calculate_data_quality_score(
+            df_clean, 
+            st.session_state['schema_config'], 
+            st.session_state['custom_rules']
+        )
+        score = q_breakdown["overall_score"]
+        
+        # Determine status text and class
+        if score >= 90:
+            status_text = "Excellent"
+            status_class = "status-excellent"
+        elif score >= 70:
+            status_text = "Good"
+            status_class = "status-good"
+        else:
+            status_text = "Poor"
+            status_class = "status-poor"
+            
+        st.markdown(f"""
+        <div class="quality-card">
+            <div class="quality-left">
+                <div class="overall-title">Data Quality Score</div>
+                <div class="overall-score {status_class}">{score:.0f}<span class="score-out-of">/100</span></div>
+                <div class="overall-status {status_class}">{status_text}</div>
+            </div>
+            <div class="quality-right">
+                <div class="breakdown-title">Quality Breakdown</div>
+                <div class="breakdown-item">
+                    <div class="breakdown-label">
+                        <span>Completeness</span>
+                        <span>{q_breakdown['completeness']:.0f}%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: {q_breakdown['completeness']}%; background-color: #10B981;"></div>
+                    </div>
+                </div>
+                <div class="breakdown-item">
+                    <div class="breakdown-label">
+                        <span>Consistency</span>
+                        <span>{q_breakdown['consistency']:.0f}%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: {q_breakdown['consistency']}%; background-color: #3B82F6;"></div>
+                    </div>
+                </div>
+                <div class="breakdown-item">
+                    <div class="breakdown-label">
+                        <span>Validity</span>
+                        <span>{q_breakdown['validity']:.0f}%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: {q_breakdown['validity']}%; background-color: #8B5CF6;"></div>
+                    </div>
+                </div>
+                <div class="breakdown-item">
+                    <div class="breakdown-label">
+                        <span>Uniqueness</span>
+                        <span>{q_breakdown['uniqueness']:.0f}%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: {q_breakdown['uniqueness']}%; background-color: #EC4899;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        st.markdown("#### 📥 Raw Dataset Preview (First 10 rows)")
+        st.dataframe(df_raw.head(10), use_container_width=True)
+        
+        st.markdown("#### 🧹 Current Cleaned Dataset Preview (Top 100 rows)")
         st.dataframe(df_clean.head(100), use_container_width=True)
 
 # ================= TAB 2: DATA PROFILING =================
@@ -580,31 +972,55 @@ with tab_validation:
             else:
                 res = st.session_state['validation_results']
                 
-                # Schema errors
+                # Schema Validation Results
                 st.markdown("##### 📁 Schema Consistency Results")
-                if res["schema_valid"]:
-                    st.success("✓ All columns match their expected schemas!")
-                else:
-                    st.error("✗ Schema violations or missing columns detected!")
-                    if res["missing_cols"]:
-                        st.markdown(f"**Missing Columns:** {', '.join(res['missing_cols'])}")
-                    if res["unexpected_cols"]:
-                        st.markdown(f"**Unexpected Columns:** {', '.join(res['unexpected_cols'])}")
-                    if res["schema_errors"]:
-                        st.dataframe(pd.DataFrame(res["schema_errors"]), use_container_width=True)
+                schema_config = st.session_state['schema_config']
+                schema_errors = res.get("schema_errors", [])
+                
+                # Render check items for each column in schema config
+                for col_name, expected_type in schema_config.items():
+                    if col_name in res.get("missing_cols", []):
+                        st.error(f"✗ Column '{col_name}' is missing from the dataset")
+                    else:
+                        # Count errors for this column
+                        col_errors = [err for err in schema_errors if err["column"] == col_name]
+                        err_count = len(col_errors)
+                        if err_count == 0:
+                            st.success(f"✓ {col_name} datatype valid (conforms to {expected_type})")
+                        else:
+                            st.error(f"✗ {err_count} rows contain invalid {col_name} datatype (expected {expected_type})")
+                
+                if res.get("unexpected_cols", []):
+                    st.warning(f"⚠️ Unexpected Columns present: {', '.join(res['unexpected_cols'])}")
+                
+                if schema_errors:
+                    with st.expander("Show detailed schema error logs"):
+                        st.dataframe(pd.DataFrame(schema_errors), use_container_width=True)
                         
-                # Custom rules errors
+                # Custom Rules Results
                 st.markdown("##### ⚙ Custom Rules Evaluation")
                 if not st.session_state['custom_rules']:
                     st.info("No custom rules configured yet.")
-                elif res["rules_valid"]:
-                    st.success("✓ All custom rules evaluated successfully with 0 failures!")
                 else:
-                    st.error("✗ Some custom rules failed validation!")
-                    st.dataframe(pd.DataFrame(res["rules_results"]), use_container_width=True)
-                    if res["rules_failed_rows"]:
-                        st.markdown("**Sample Failing Records:**")
-                        st.dataframe(pd.DataFrame(res["rules_failed_rows"]), use_container_width=True)
+                    rules_results = res.get("rules_results", [])
+                    rules_failed_rows = res.get("rules_failed_rows", [])
+                    
+                    for r_res in rules_results:
+                        rule_str = r_res["rule"]
+                        status = r_res["status"]
+                        failures = r_res.get("failures", 0)
+                        msg = r_res.get("message", "")
+                        
+                        if status == "Passed":
+                            st.success(f"✓ Rule {rule_str} valid (0 failures)")
+                        elif status == "Failed":
+                            st.error(f"✗ {failures} rows failed rule: {rule_str}")
+                        else:
+                            st.warning(f"⚠️ Rule {rule_str} error: {msg}")
+                            
+                    if rules_failed_rows:
+                        with st.expander("Show detailed custom rules failure logs"):
+                            st.dataframe(pd.DataFrame(rules_failed_rows), use_container_width=True)
 
 # ================= TAB 5: QUALITY DASHBOARD =================
 with tab_dashboard:
@@ -633,6 +1049,16 @@ with tab_dashboard:
             st.markdown(f"- **Validity (schema matching):** {q_breakdown['validity']}%")
             st.markdown(f"- **Consistency (custom rules passing):** {q_breakdown['consistency']}%")
             
+            st.markdown("#### Before vs After Comparison")
+            render_comparison_table(
+                df_raw, 
+                df_clean, 
+                st.session_state['initial_score'], 
+                st.session_state['current_score'],
+                st.session_state['schema_config'],
+                st.session_state['custom_rules']
+            )
+            
         with col_d2:
             fig_missing = plot_missing_heatmap(df_clean)
             st.plotly_chart(fig_missing, use_container_width=True)
@@ -647,6 +1073,47 @@ with tab_dashboard:
             inferred_types = {c['column']: c['inferred_type'] for c in profile_res['columns_profile']}
             fig_types = plot_datatype_bar(inferred_types)
             st.plotly_chart(fig_types, use_container_width=True)
+            
+        # Outlier Analysis Section
+        st.markdown("---")
+        st.markdown("#### 📈 Outlier Analysis Dashboard")
+        num_cols = df_clean.select_dtypes(include=[np.number]).columns.tolist()
+        if not num_cols:
+            st.info("No numerical columns available for outlier detection.")
+        else:
+            col_o1, col_o2 = st.columns([1, 3])
+            with col_o1:
+                outlier_target = st.selectbox(
+                    "Select Column for Outlier Analysis", 
+                    num_cols, 
+                    key="dashboard_outlier_col"
+                )
+                method = st.selectbox(
+                    "Outlier Detection Method", 
+                    ["IQR Method", "Z-Score Method"], 
+                    key="dashboard_outlier_method"
+                )
+                thresh = st.number_input(
+                    "Threshold multiplier", 
+                    value=1.5 if method == "IQR Method" else 3.0, 
+                    step=0.1, 
+                    key="dashboard_outlier_thresh"
+                )
+                
+                # Compute outlier count
+                if method == "IQR Method":
+                    mask, summary = detect_outliers_iqr(df_clean, outlier_target)
+                else:
+                    mask, summary = detect_outliers_zscore(df_clean, outlier_target, thresh)
+                st.metric("Detected Outliers", f"{summary['count']}")
+                
+            with col_o2:
+                fig_box = plot_outlier_boxplot(df_clean, outlier_target)
+                fig_scatter = plot_outlier_scatter(df_clean, outlier_target, mask)
+                
+                col_chart1, col_chart2 = st.columns(2)
+                col_chart1.plotly_chart(fig_box, use_container_width=True)
+                col_chart2.plotly_chart(fig_scatter, use_container_width=True)
 
 # ================= TAB 6: REPORTS & EXPORTS =================
 with tab_reports:
@@ -748,6 +1215,13 @@ with tab_reports:
                 st.error(f"Error compiling PDF report: {str(e)}")
                 
             st.markdown("---")
-            st.markdown("##### Processing Summary Check")
-            st.write(f"- Operations applied: **{len(st.session_state['cleaning_history'])}**")
-            st.write(f"- Data quality improved from **{st.session_state['initial_score']:.1f}%** to **{st.session_state['current_score']:.1f}%**")
+            st.markdown("##### Before vs After Cleaning Comparison")
+            render_comparison_table(
+                df_raw, 
+                df_clean, 
+                st.session_state['initial_score'], 
+                st.session_state['current_score'],
+                st.session_state['schema_config'],
+                st.session_state['custom_rules']
+            )
+            st.write(f"Operations applied: **{len(st.session_state['cleaning_history'])}**")
